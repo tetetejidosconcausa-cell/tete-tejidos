@@ -4,9 +4,9 @@ Uso: python generar_tarjeta.py  -> crea tarjeta.html en esta carpeta."""
 import os
 import segno
 
-URL = "https://tete-tejidos.vercel.app"
+URL = "https://www.tetetejidos.cl"
 WHATSAPP = "+56 9 5029 4831"
-WEB = "tete-tejidos.vercel.app"
+WEB = "tetetejidos.cl"
 AQUI = os.path.dirname(os.path.abspath(__file__))
 
 # QR vectorial, corrección H (30 %) para admitir el logo al centro

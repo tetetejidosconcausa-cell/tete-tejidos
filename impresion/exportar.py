@@ -7,6 +7,17 @@ import cv2
 from PIL import Image, ImageDraw, ImageFilter
 
 Image.init()
+
+def safe_path(path):
+    """Si el archivo está abierto (bloqueado), devuelve un nombre alternativo."""
+    try:
+        open(path, "ab").close()
+        return path
+    except PermissionError:
+        base, ext = path.rsplit(".", 1)
+        alt = f"{base} (actualizado).{ext}"
+        print(f"  aviso: {path.split(chr(92))[-1]} está abierto; se guarda como {alt.split(chr(92))[-1]}")
+        return alt
 out, pdf_path = sys.argv[1], sys.argv[2]
 px = 300 / 25.4
 
@@ -45,7 +56,7 @@ for card in cards:
         dr.line([(0, y), (pad - gap, y)], fill="black", width=w)
         dr.line([(canvas.width - pad + gap, y), (canvas.width, y)], fill="black", width=w)
     pages.append(canvas)
-pages[0].save(fr"{out}\Tarjeta Teté - con marcas de corte.pdf", save_all=True, append_images=pages[1:], resolution=300)
+pages[0].save(safe_path(fr"{out}\Tarjeta Teté - con marcas de corte.pdf"), save_all=True, append_images=pages[1:], resolution=300)
 print("PDF con marcas de corte listo")
 
 # Vista previa: tarjeta ya cortada (90 x 50 mm) con sombra
@@ -61,5 +72,5 @@ for k, c in enumerate(cut):
     m = Image.new("L", c.size, 0)
     ImageDraw.Draw(m).rounded_rectangle((0, 0, cw, ch), radius=14, fill=255)
     bg.paste(c, (x, y), m)
-bg.save(fr"{out}\Vista previa - tarjeta cortada.png")
+bg.save(safe_path(fr"{out}\Vista previa - tarjeta cortada.png"))
 print("Vista previa lista")
