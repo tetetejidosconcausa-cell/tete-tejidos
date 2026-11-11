@@ -1,0 +1,144 @@
+/* ===================== Teté · Refinamiento profesional =====================
+   Se carga al final. Principios:
+   1. Una sola animación protagonista (el mandala del hero); todo lo demás quieto o solo en hover.
+   2. Color: coral = acción principal, turquesa = secundario, chocolate = texto/base.
+      Girasol y rosa solo como acentos puntuales.
+   3. Tipografía: Pacifico solo en el logo y en UNA palabra por título. Todo lo demás en Nunito.
+   4. Menos adornos simultáneos: las bolitas tejidas quedan como firma solo en el pie de página. */
+
+/* ---------- 1. Movimiento ---------- */
+.hero-thread,.hero-mandala-sm{display:none}
+.seal-ring{animation:none}
+.cut,.stage3d .obj{animation:none}
+.cause-mandala svg{animation:none}
+.marquee-track{animation:marq 40s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.wa-float::before{animation-iteration-count:3}
+.t-mandala .hero-mandala svg{animation-duration:160s}
+.card:hover{transform:translateY(-6px)}
+.hero-art [data-depth]{transition:translate .6s cubic-bezier(.2,.8,.2,1)}
+
+/* ---------- 2. Adornos: menos, mejor ---------- */
+.t-mandala .step::after,.t-mandala .d-head::after,.t-mandala .marquee::after,
+.t-mandala .idea-card::after,.t-mandala .how::before,.idea-card::before{display:none}
+.t-mandala .d-head{border-bottom:1px solid var(--arena)}
+.t-mandala .stage3d::before,.t-mandala .m-media::before{display:none}
+.stage3d,.t-mandala .stage3d{background:radial-gradient(120% 95% at 50% 32%,#fff 0%,#FBF7F1 48%,#F2E8D9 100%)}
+.t-mandala .m-media{background:radial-gradient(110% 90% at 50% 32%,#fff 0%,#FBF7F1 48%,#F0E4D2 100%)}
+.t-mandala .hero h1 .script{text-shadow:none}
+.t-mandala .hero h1 .big em::after{display:none}
+.t-mandala .hero::before{background:radial-gradient(55% 65% at 80% 45%,rgba(242,180,37,.22),transparent 70%),radial-gradient(40% 45% at 5% 95%,rgba(232,106,154,.10),transparent 70%)}
+.t-mandala .hero-art .ring{display:none}
+.cause-mandala{opacity:.10!important}
+.t-mandala .picker{background:var(--coral);background-image:radial-gradient(70% 90% at 12% 50%,rgba(255,255,255,.16),transparent 70%),radial-gradient(50% 70% at 100% 100%,rgba(74,44,31,.18),transparent 70%)}
+.t-mandala .picker-img{border-width:8px;transform:none;border-radius:28px}
+.t-mandala .picker-copy h2 .script{text-shadow:none}
+
+/* ---------- 3. Tarjetas de producto ---------- */
+.t-mandala .card{border-top:0;border-radius:24px;box-shadow:0 1px 0 rgba(74,44,31,.06),0 18px 40px -24px rgba(74,44,31,.4)}
+.t-mandala .card:hover{box-shadow:0 1px 0 rgba(74,44,31,.06),0 30px 50px -26px rgba(74,44,31,.5)}
+.t-mandala .c-media .badge,.t-mandala .card:nth-child(4n+3) .c-media .badge{background:rgba(255,255,255,.92);color:var(--choco);box-shadow:0 4px 12px -6px rgba(74,44,31,.35);backdrop-filter:blur(4px)}
+.t-mandala .card[data-id="gorrito-gatito"] .c-media .badge{background:var(--coral);color:#fff}
+.c-body h3{font-size:18px;letter-spacing:-.01em}
+.price{font-size:18px}
+.t-mandala .add{background:var(--choco)}
+.t-mandala .add:hover{background:var(--coral)}
+.quick{font-size:13.5px;padding:10px 18px;background:rgba(255,255,255,.95);box-shadow:0 8px 20px -10px rgba(74,44,31,.45)}
+.c-color{font-size:13px}
+
+/* filtros con conteo */
+.chip small{display:inline-grid;place-items:center;min-width:22px;height:22px;margin-left:6px;padding:0 6px;border-radius:99px;background:var(--crema);color:var(--choco);font-size:11.5px;font-weight:900}
+.chip.on small{background:rgba(255,255,255,.25);color:#fff}
+
+/* ---------- 4. Tipografía: una sola palabra manuscrita por título ---------- */
+.step h3,.t-mandala .step:nth-child(n) h3{font-family:Nunito,sans-serif;font-weight:900;font-size:21px;color:var(--crema);letter-spacing:-.01em}
+.guide-box h3{font-family:Nunito,sans-serif;font-weight:900;font-size:22px}
+.sec-head h2,.picker-copy h2,.idea-copy h2{letter-spacing:-.03em}
+
+/* ---------- 5. La causa: tarjetas sobrias ---------- */
+.step,.t-mandala .step{background:rgba(251,245,236,.05);border:1px solid rgba(251,245,236,.12);border-radius:22px}
+.step .n,.t-mandala .step .n{color:var(--girasol);opacity:.8}
+
+/* ---------- 6. Cómo comprar: números en círculo, sin bordes de color ---------- */
+.how{padding-top:90px}
+.how-it,.t-mandala .how-it,.t-mandala .how-it:nth-child(3){border:1px solid var(--arena);border-top:1px solid var(--arena);box-shadow:0 14px 30px -24px rgba(74,44,31,.45)}
+.how-it b,.t-mandala .how-it b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;font-family:Nunito,sans-serif;font-weight:900;font-size:18px;color:#fff;background:var(--coral);line-height:1}
+.t-mandala .how-it:nth-child(2) b{background:var(--turquesa);color:#fff}
+.t-mandala .how-it:nth-child(3) b{background:var(--choco);color:#fff}
+.how-it h3{margin-top:14px}
+@media (max-width:640px){.how-it b,.t-mandala .how-it b{width:40px;height:40px;font-size:16px}.how-it h3{margin-top:0}}
+
+/* ---------- 7. Pedido a medida ---------- */
+.t-mandala .idea{background:linear-gradient(180deg,var(--crema),#F7EEE2)}
+.t-mandala .idea-card{border-top:0;box-shadow:0 1px 0 rgba(74,44,31,.06),0 30px 60px -30px rgba(74,44,31,.45)}
+.idea-steps li:nth-child(1) span{background:var(--coral);color:#fff}
+.idea-steps li:nth-child(2) span{background:var(--turquesa);color:#fff}
+.idea-steps li:nth-child(3) span{background:var(--choco);color:#fff}
+
+/* ---------- 8. Detalles generales ---------- */
+.t-mandala .marquee{transform:rotate(-1deg)}
+.t-mandala .marquee-track span{font-size:clamp(16px,1.7vw,22px)}
+.v-ico{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--turquesa);color:#fff;font-size:14px;font-weight:900}
+.hero-tag{transform:none;border-radius:16px}
+.hero-tag:hover{transform:translateY(-3px)}
+.t-mandala .seal{width:118px;height:118px}
+.t-mandala .seal-ic{width:58px;height:58px}
+.footer .copy{opacity:.45}
+::selection{background:rgba(31,163,160,.25)}
+:focus-visible{outline:3px solid var(--turquesa);outline-offset:3px;border-radius:8px}
+@media (max-width:640px){.t-mandala .seal{width:90px;height:90px}.t-mandala .seal-ic{width:42px;height:42px}}
+.t-mandala .idea{background:var(--crema)}
+
+/* ===================== Franja de confianza ===================== */
+.trust{padding:64px clamp(16px,4vw,56px) 0}
+.trust-in{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.t-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--arena);border-radius:18px;padding:16px 18px;box-shadow:0 14px 30px -26px rgba(74,44,31,.5)}
+.t-ico{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 14%,#fff)}
+.t-ico svg{width:24px;height:24px;fill:currentColor}
+.t-item b{display:block;font-weight:900;font-size:15px;line-height:1.25}
+.t-item span{display:block;font-size:13px;opacity:.72;line-height:1.35;margin-top:2px}
+.trust + .shop{padding-top:80px}
+@media (max-width:980px){.trust-in{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.trust{padding-top:44px}.trust-in{gap:10px}.t-item{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}.t-ico{width:40px;height:40px;border-radius:12px}.t-item b{font-size:14px}.t-item span{font-size:12.5px}.trust + .shop{padding-top:56px}}
+
+/* ===================== Foto que vuela al carrito ===================== */
+.fly-img{position:fixed;z-index:120;object-fit:contain;pointer-events:none;filter:drop-shadow(0 14px 18px rgba(74,44,31,.35));will-change:transform,opacity}
+
+/* ===================== Completa el look ===================== */
+.m-look{border-top:1px solid var(--arena);padding-top:16px;margin-top:6px}
+.m-look h4{margin:0 0 10px;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.look-row{display:grid;gap:10px}
+.look{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:12px;background:#fff;border:1px solid var(--arena);border-radius:16px;padding:8px 10px 8px 8px;transition:border-color .2s,box-shadow .2s}
+.look:hover{border-color:var(--turquesa);box-shadow:0 10px 24px -18px rgba(74,44,31,.5)}
+.look-img{width:62px;height:62px;border:none;border-radius:12px;padding:4px;background:radial-gradient(circle at 50% 40%,#fff,#F0E4D2);cursor:pointer}
+.look-img img{width:100%;height:100%;object-fit:contain}
+.look-txt{border:none;background:none;text-align:left;padding:0;cursor:pointer;color:var(--choco);font-family:inherit}
+.look-txt b{display:block;font-weight:900;font-size:14.5px;line-height:1.25}
+.look-txt span{display:block;font-weight:800;font-size:14px;color:var(--coral);margin-top:2px}
+.look-add{border:none;border-radius:99px;padding:9px 14px;font:900 13px Nunito;background:var(--choco);color:#fff;white-space:nowrap;transition:background .2s}
+.look-add:hover{background:var(--coral)}
+.look-add.ok{background:var(--turquesa)}
+
+/* ===================== Ficha en teléfono: botón Agregar siempre visible ===================== */
+@media (max-width:640px){
+  .m-info{padding-bottom:0}
+  #mAdd{position:sticky;bottom:0;z-index:4;margin:0 -20px;width:calc(100% + 40px);border-radius:0;padding:18px 20px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -14px 28px -10px rgba(251,245,236,1),0 -1px 0 var(--arena);font-size:17px}
+  #mAdd::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:22px;background:linear-gradient(to top,var(--crema),rgba(251,245,236,0));pointer-events:none}
+  .m-info .wa-ask{order:5}
+  .m-look{order:6;padding-bottom:24px}
+  .m-det{order:4}
+}
+@media (max-width:640px){#mAdd{order:99}}
+.t-item .t-ico{display:grid;margin:0;opacity:1;font-size:0}.t-item .t-ico svg{width:24px;height:24px}
+
+/* ===================== Hero: rastro de huellitas ===================== */
+.paw-trail{position:absolute;inset:0;pointer-events:none;z-index:1}
+.paw-trail .pp{position:absolute;fill:currentColor;opacity:0;transform:rotate(var(--r)) scale(.6);animation:pawStep 6.2s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes pawStep{
+  0%{opacity:0;transform:rotate(var(--r)) scale(.55)}
+  7%{opacity:.75;transform:rotate(var(--r)) scale(1.06)}
+  12%{opacity:.7;transform:rotate(var(--r)) scale(1)}
+  58%{opacity:.6;transform:rotate(var(--r)) scale(1)}
+  78%,100%{opacity:0;transform:rotate(var(--r)) scale(.9)}
+}
+@media (prefers-reduced-motion:reduce){.paw-trail .pp{animation:none;opacity:.4;transform:rotate(var(--r))}}

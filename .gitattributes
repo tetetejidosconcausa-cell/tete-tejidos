@@ -1,0 +1,7 @@
+# Saltos de línea normalizados en el repositorio; imágenes y fuentes como binarios
+* text=auto
+*.ps1 text eol=crlf
+*.jpg binary
+*.png binary
+*.webp binary
+*.woff2 binary

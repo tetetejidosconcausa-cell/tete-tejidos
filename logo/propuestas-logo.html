@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tete — Propuestas de logo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --choco:#4A2C1F; --caramelo:#B86B2B; --arena:#E9D8BF; --crema:#FBF5EC;
+    --girasol:#F2B425; --turquesa:#1FA3A0; --coral:#E2553B; --rosa:#E86A9A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Nunito,system-ui,sans-serif;background:var(--crema);color:var(--choco)}
+  header{padding:48px 24px 16px;text-align:center}
+  header h1{font-family:Pacifico,cursive;font-weight:400;font-size:52px;margin:0}
+  header p{max-width:680px;margin:12px auto 0;line-height:1.6}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;padding:32px 24px 24px;max-width:1240px;margin:auto}
+  .card{background:#fff;border-radius:22px;box-shadow:0 6px 24px rgba(74,44,31,.08);overflow:hidden;display:flex;flex-direction:column}
+  .stage{display:grid;grid-template-columns:1fr 1fr}
+  .stage>div svg{max-width:100%;height:auto}.stage>div{display:flex;align-items:center;justify-content:center;padding:26px 14px;min-height:250px}
+  .light{background:var(--crema)}
+  .dark{background:var(--choco)}
+  .info{padding:18px 22px 24px;border-top:2px dashed var(--arena)}
+  .info h2{margin:0 0 4px;font-size:20px}
+  .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--caramelo);margin-bottom:6px}
+  .info p{margin:6px 0 0;line-height:1.55;font-size:15px}
+  .rec{outline:3px solid var(--girasol)}
+  .rec .tag{color:var(--turquesa)}
+  section.palette{max-width:1240px;margin:0 auto 60px;padding:0 24px}
+  section.palette h2{font-family:Pacifico,cursive;font-weight:400;font-size:30px}
+  .sw{display:flex;flex-wrap:wrap;gap:14px}
+  .sw div{width:130px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.06);font-size:13px}
+  .sw span{display:block;height:70px}
+  .sw b,.sw i{display:block;padding:0 10px}
+  .sw b{padding-top:8px}.sw i{padding-bottom:10px;font-style:normal;opacity:.7}
+  .word{font-family:Pacifico,cursive;font-size:50px;line-height:1}
+  .sub{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+  .lockup{display:flex;flex-direction:column;align-items:center;gap:6px}
+</style>
+</head>
+<body>
+
+<!-- Símbolos reutilizables -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="clipOvillo"><circle cx="100" cy="128" r="40"/></clipPath>
+    <pattern id="punto" width="12" height="10" patternUnits="userSpaceOnUse">
+      <path d="M1 1 L6 8 L11 1" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header>
+  <h1>tete</h1>
+  <p>Cinco direcciones de logo para <b>Tete</b>: tejidos a crochet hechos a mano, donde parte de cada venta alimenta a perritos callejeros. Todas combinan una <b>huellita</b> con un elemento del <b>tejido</b> (ovillo, mandala, punto, hilo, etiqueta). Cada una se muestra sobre fondo claro y oscuro.</p>
+</header>
+
+<div class="grid">
+
+  <!-- 1. Huella-ovillo -->
+  <article class="card rec">
+    <div class="stage">
+      <div class="light">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200" aria-label="Huella ovillo">
+            <g fill="#B86B2B">
+              <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/>
+              <ellipse cx="79" cy="48" rx="16" ry="21" transform="rotate(-8 79 48)"/>
+              <ellipse cx="121" cy="48" rx="16" ry="21" transform="rotate(8 121 48)"/>
+              <ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/>
+            </g>
+            <circle cx="100" cy="128" r="40" fill="#4A2C1F"/>
+            <g clip-path="url(#clipOvillo)" fill="none" stroke="#E9D8BF" stroke-width="3" stroke-linecap="round">
+              <path d="M58 112 Q100 88 142 112"/><path d="M58 126 Q100 100 142 126"/><path d="M58 140 Q100 114 142 140"/>
+              <path d="M74 92 Q96 130 80 170"/><path d="M90 88 Q114 128 98 172"/><path d="M108 88 Q132 126 120 170"/>
+            </g>
+            <path d="M136 146 C156 160 160 182 182 176 C192 173 192 162 184 160" fill="none" stroke="#4A2C1F" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <div class="word">tete</div>
+          <div class="sub" style="color:#B86B2B">tejidos con causa</div>
+        </div>
+      </div>
+      <div class="dark">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200">
+            <g fill="#F2B425">
+              <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/>
+              <ellipse cx="79" cy="48" rx="16" ry="21" transform="rotate(-8 79 48)"/>
+              <ellipse cx="121" cy="48" rx="16" ry="21" transform="rotate(8 121 48)"/>
+              <ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/>
+            </g>
+            <circle cx="100" cy="128" r="40" fill="#FBF5EC"/>
+            <g clip-path="url(#clipOvillo)" fill="none" stroke="#B86B2B" stroke-width="3" stroke-linecap="round">
+              <path d="M58 112 Q100 88 142 112"/><path d="M58 126 Q100 100 142 126"/><path d="M58 140 Q100 114 142 140"/>
+              <path d="M74 92 Q96 130 80 170"/><path d="M90 88 Q114 128 98 172"/><path d="M108 88 Q132 126 120 170"/>
+            </g>
+            <path d="M136 146 C156 160 160 182 182 176 C192 173 192 162 184 160" fill="none" stroke="#FBF5EC" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <div class="word" style="color:#FBF5EC">tete</div>
+          <div class="sub" style="color:#F2B425">tejidos con causa</div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <span class="tag">★ Recomendada · 01</span>
+      <h2>Huella-ovillo</h2>
+      <p>La almohadilla de la huella es un <b>ovillo de lana</b> con su hebra suelta. Se entiende al instante (perritos + tejido), funciona en chico (etiqueta de cuero, sello, ícono de Instagram) y en grande (portada web).</p>
+    </div>
+  </article>
+
+  <!-- 2. Huella mandala -->
+  <article class="card">
+    <div class="stage">
+      <div class="light">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200">
+            <g>
+              <circle cx="46" cy="80" r="17" fill="#E2553B"/><circle cx="46" cy="80" r="10" fill="none" stroke="#FBF5EC" stroke-width="2.5" stroke-dasharray="3 3"/>
+              <circle cx="80" cy="48" r="18" fill="#F2B425"/><circle cx="80" cy="48" r="11" fill="none" stroke="#FBF5EC" stroke-width="2.5" stroke-dasharray="3 3"/>
+              <circle cx="120" cy="48" r="18" fill="#1FA3A0"/><circle cx="120" cy="48" r="11" fill="none" stroke="#FBF5EC" stroke-width="2.5" stroke-dasharray="3 3"/>
+              <circle cx="154" cy="80" r="17" fill="#E86A9A"/><circle cx="154" cy="80" r="10" fill="none" stroke="#FBF5EC" stroke-width="2.5" stroke-dasharray="3 3"/>
+            </g>
+            <circle cx="100" cy="130" r="44" fill="#4A2C1F"/>
+            <circle cx="100" cy="130" r="36" fill="none" stroke="#F2B425" stroke-width="6" stroke-dasharray="5 4"/>
+            <g fill="#E2553B">
+              <circle cx="100" cy="106" r="5"/><circle cx="117" cy="113" r="5"/><circle cx="124" cy="130" r="5"/><circle cx="117" cy="147" r="5"/>
+              <circle cx="100" cy="154" r="5"/><circle cx="83" cy="147" r="5"/><circle cx="76" cy="130" r="5"/><circle cx="83" cy="113" r="5"/>
+            </g>
+            <circle cx="100" cy="130" r="12" fill="#1FA3A0"/>
+            <circle cx="100" cy="130" r="5" fill="#FBF5EC"/>
+          </svg>
+          <div class="word">tete</div>
+        </div>
+      </div>
+      <div class="dark">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200">
+            <circle cx="46" cy="80" r="17" fill="#E2553B"/><circle cx="80" cy="48" r="18" fill="#F2B425"/>
+            <circle cx="120" cy="48" r="18" fill="#1FA3A0"/><circle cx="154" cy="80" r="17" fill="#E86A9A"/>
+            <circle cx="100" cy="130" r="44" fill="#FBF5EC"/>
+            <circle cx="100" cy="130" r="36" fill="none" stroke="#F2B425" stroke-width="6" stroke-dasharray="5 4"/>
+            <g fill="#E2553B">
+              <circle cx="100" cy="106" r="5"/><circle cx="117" cy="113" r="5"/><circle cx="124" cy="130" r="5"/><circle cx="117" cy="147" r="5"/>
+              <circle cx="100" cy="154" r="5"/><circle cx="83" cy="147" r="5"/><circle cx="76" cy="130" r="5"/><circle cx="83" cy="113" r="5"/>
+            </g>
+            <circle cx="100" cy="130" r="12" fill="#1FA3A0"/>
+          </svg>
+          <div class="word" style="color:#FBF5EC">tete</div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <span class="tag">02</span>
+      <h2>Huella mandala</h2>
+      <p>Toma sus <b>mandalas y atrapasueños</b>: la almohadilla es un mandala de crochet y los dedos son "bolitas" de colores. Muy alegre y con identidad propia; más detallada, así que en tamaños muy chicos pierde algo de detalle.</p>
+    </div>
+  </article>
+
+  <!-- 3. Corazón tejido -->
+  <article class="card">
+    <div class="stage">
+      <div class="light">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200">
+            <g fill="#E2553B">
+              <ellipse cx="46" cy="80" rx="15" ry="19" transform="rotate(-25 46 80)"/>
+              <ellipse cx="79" cy="50" rx="16" ry="21" transform="rotate(-8 79 50)"/>
+              <ellipse cx="121" cy="50" rx="16" ry="21" transform="rotate(8 121 50)"/>
+              <ellipse cx="154" cy="80" rx="15" ry="19" transform="rotate(25 154 80)"/>
+            </g>
+            <path id="heart" d="M100 178 C52 150 48 106 74 98 C88 94 97 103 100 112 C103 103 112 94 126 98 C152 106 148 150 100 178Z" fill="#E2553B"/>
+            <path d="M100 178 C52 150 48 106 74 98 C88 94 97 103 100 112 C103 103 112 94 126 98 C152 106 148 150 100 178Z" fill="url(#punto)"/>
+          </svg>
+          <div class="word">tete</div>
+        </div>
+      </div>
+      <div class="dark">
+        <div class="lockup">
+          <svg width="150" height="150" viewBox="0 0 200 200">
+            <g fill="#E86A9A">
+              <ellipse cx="46" cy="80" rx="15" ry="19" transform="rotate(-25 46 80)"/>
+              <ellipse cx="79" cy="50" rx="16" ry="21" transform="rotate(-8 79 50)"/>
+              <ellipse cx="121" cy="50" rx="16" ry="21" transform="rotate(8 121 50)"/>
+              <ellipse cx="154" cy="80" rx="15" ry="19" transform="rotate(25 154 80)"/>
+            </g>
+            <path d="M100 178 C52 150 48 106 74 98 C88 94 97 103 100 112 C103 103 112 94 126 98 C152 106 148 150 100 178Z" fill="#E86A9A"/>
+            <path d="M100 178 C52 150 48 106 74 98 C88 94 97 103 100 112 C103 103 112 94 126 98 C152 106 148 150 100 178Z" fill="url(#punto)"/>
+          </svg>
+          <div class="word" style="color:#FBF5EC">tete</div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <span class="tag">03</span>
+      <h2>Corazón tejido</h2>
+      <p>La almohadilla es un <b>corazón con textura de punto</b> (las "V" del tejido). Comunica el lado solidario: amor por los animales. Más emotiva, ideal si la causa va a ser el centro de la marca.</p>
+    </div>
+  </article>
+
+  <!-- 4. Sello / etiqueta -->
+  <article class="card">
+    <div class="stage">
+      <div class="light">
+        <svg width="210" height="210" viewBox="0 0 220 220">
+          <defs><path id="arc1" d="M30 110 A80 80 0 1 1 190 110 A80 80 0 1 1 30 110"/></defs>
+          <circle cx="110" cy="110" r="104" fill="#B86B2B"/>
+          <circle cx="110" cy="110" r="96" fill="none" stroke="#FBF5EC" stroke-width="2" stroke-dasharray="6 5"/>
+          <circle cx="110" cy="110" r="62" fill="#FBF5EC"/>
+          <text font-family="Nunito" font-weight="800" font-size="13" letter-spacing="2.2" fill="#FBF5EC"><textPath href="#arc1" startOffset="0">TEJIDOS CON CAUSA · POR LOS PERRITOS · HECHO A MANO ·</textPath></text>
+          <text x="110" y="122" text-anchor="middle" font-family="Pacifico" font-size="36" fill="#4A2C1F">tete</text>
+          <g fill="#B86B2B" transform="translate(98 132) scale(.12)">
+            <ellipse cx="46" cy="78" rx="15" ry="19"/><ellipse cx="79" cy="48" rx="16" ry="21"/><ellipse cx="121" cy="48" rx="16" ry="21"/><ellipse cx="154" cy="78" rx="15" ry="19"/><circle cx="100" cy="128" r="40"/>
+          </g>
+        </svg>
+      </div>
+      <div class="dark">
+        <svg width="210" height="210" viewBox="0 0 220 220">
+          <defs><path id="arc2" d="M30 110 A80 80 0 1 1 190 110 A80 80 0 1 1 30 110"/></defs>
+          <circle cx="110" cy="110" r="104" fill="#F2B425"/>
+          <circle cx="110" cy="110" r="96" fill="none" stroke="#4A2C1F" stroke-width="2" stroke-dasharray="6 5"/>
+          <circle cx="110" cy="110" r="62" fill="#4A2C1F"/>
+          <text font-family="Nunito" font-weight="800" font-size="13" letter-spacing="2.2" fill="#4A2C1F"><textPath href="#arc2">TEJIDOS CON CAUSA · POR LOS PERRITOS · HECHO A MANO ·</textPath></text>
+          <text x="110" y="122" text-anchor="middle" font-family="Pacifico" font-size="36" fill="#FBF5EC">tete</text>
+          <g fill="#F2B425" transform="translate(98 132) scale(.12)">
+            <ellipse cx="46" cy="78" rx="15" ry="19"/><ellipse cx="79" cy="48" rx="16" ry="21"/><ellipse cx="121" cy="48" rx="16" ry="21"/><ellipse cx="154" cy="78" rx="15" ry="19"/><circle cx="100" cy="128" r="40"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="info">
+      <span class="tag">04</span>
+      <h2>Sello artesanal</h2>
+      <p>Insignia circular con <b>costura punteada</b> (como el pespunte de una etiqueta) y el mensaje solidario alrededor. Perfecta para etiquetas, stickers en las bolsitas de regalo y foto de perfil. Complementa a cualquiera de las otras.</p>
+    </div>
+  </article>
+
+  <!-- 5. Wordmark con hilo -->
+  <article class="card">
+    <div class="stage">
+      <div class="light">
+        <svg width="250" height="150" viewBox="0 0 260 150">
+          <text x="18" y="96" font-family="Pacifico" font-size="72" fill="#4A2C1F">tete</text>
+          <g fill="#E2553B" transform="translate(118 8) scale(.17)">
+            <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/><ellipse cx="79" cy="48" rx="16" ry="21"/><ellipse cx="121" cy="48" rx="16" ry="21"/><ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/><circle cx="100" cy="128" r="40"/>
+          </g>
+          <path d="M30 120 C80 112 140 132 196 116 C210 112 214 104 220 108" fill="none" stroke="#B86B2B" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+          <circle cx="232" cy="110" r="14" fill="#F2B425"/>
+          <path d="M222 104 Q232 98 242 106 M220 112 Q232 104 244 114 M224 120 Q234 112 242 120" fill="none" stroke="#B86B2B" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="dark">
+        <svg width="250" height="150" viewBox="0 0 260 150">
+          <text x="18" y="96" font-family="Pacifico" font-size="72" fill="#FBF5EC">tete</text>
+          <g fill="#F2B425" transform="translate(118 8) scale(.17)">
+            <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/><ellipse cx="79" cy="48" rx="16" ry="21"/><ellipse cx="121" cy="48" rx="16" ry="21"/><ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/><circle cx="100" cy="128" r="40"/>
+          </g>
+          <path d="M30 120 C80 112 140 132 196 116 C210 112 214 104 220 108" fill="none" stroke="#E9D8BF" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+          <circle cx="232" cy="110" r="14" fill="#1FA3A0"/>
+          <path d="M222 104 Q232 98 242 106 M220 112 Q232 104 244 114 M224 120 Q234 112 242 120" fill="none" stroke="#FBF5EC" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+    <div class="info">
+      <span class="tag">05</span>
+      <h2>Firma con hilo</h2>
+      <p>Logotipo de solo texto: la huellita hace de <b>tilde</b> sobre la última "e" (como en la etiqueta "tété" que ya usa) y un hilo punteado termina en un ovillo. Es la versión horizontal para el encabezado de la web.</p>
+    </div>
+  </article>
+
+</div>
+
+<section class="palette">
+  <h2>Paleta sacada de sus tejidos</h2>
+  <div class="sw">
+    <div><span style="background:#4A2C1F"></span><b>Chocolate</b><i>#4A2C1F</i></div>
+    <div><span style="background:#B86B2B"></span><b>Caramelo</b><i>#B86B2B</i></div>
+    <div><span style="background:#E9D8BF"></span><b>Lana cruda</b><i>#E9D8BF</i></div>
+    <div><span style="background:#FBF5EC"></span><b>Crema</b><i>#FBF5EC</i></div>
+    <div><span style="background:#F2B425"></span><b>Girasol</b><i>#F2B425</i></div>
+    <div><span style="background:#1FA3A0"></span><b>Turquesa</b><i>#1FA3A0</i></div>
+    <div><span style="background:#E2553B"></span><b>Coral</b><i>#E2553B</i></div>
+    <div><span style="background:#E86A9A"></span><b>Rosa chicle</b><i>#E86A9A</i></div>
+  </div>
+  <p style="max-width:760px;line-height:1.6">Base cálida (chocolate, caramelo, crema) tomada del chaleco café y el gorro de girasoles; acentos de color (girasol, turquesa, coral, rosa) tomados de los mandalas, posavasos y atrapasueños. La base mantiene la marca elegante y los acentos le dan la alegría de sus piezas.</p>
+</section>
+
+</body>
+</html>

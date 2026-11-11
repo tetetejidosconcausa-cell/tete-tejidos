@@ -1,0 +1,14 @@
+﻿{
+  "name": "Teté · Tejidos con causa",
+  "short_name": "Teté",
+  "description": "Tejidos a crochet hechos a mano, en tu color. Parte de cada compra alimenta a perritos de la calle.",
+  "lang": "es-CL",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#FBF5EC",
+  "theme_color": "#1FA3A0",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

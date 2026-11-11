@@ -1,0 +1,12 @@
+# Respaldos de imágenes que ya no se usan en la página (las originales están fuera del proyecto)
+img/_archivo/
+
+# Archivos de prueba temporales
+_*.html
+
+# Sistema operativo / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+.vscode/

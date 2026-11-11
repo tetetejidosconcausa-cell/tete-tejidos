@@ -1,0 +1,157 @@
+/* ===== Tete · Concepto 02 — Huella mandala =====
+   Se carga después de styles.css y re-viste la página: base crema luminosa,
+   acentos multicolor (coral · girasol · turquesa · rosa), bolitas tejidas y mandalas. */
+
+.t-mandala{
+  --bobbles:radial-gradient(circle,var(--coral) 0 5px,transparent 5.5px),radial-gradient(circle,var(--girasol) 0 5px,transparent 5.5px),radial-gradient(circle,var(--turquesa) 0 5px,transparent 5.5px),radial-gradient(circle,var(--rosa) 0 5px,transparent 5.5px);
+  --rays:repeating-conic-gradient(from 0deg at 50% 45%,rgba(31,163,160,.07) 0 7.5deg,transparent 7.5deg 15deg);
+  background:var(--crema);
+}
+/* logo mandala: versiones de color */
+.t-mandala .logo-pos{--t1:var(--coral);--t2:var(--girasol);--t3:var(--turquesa);--t4:var(--rosa);--stitch:var(--crema);--pad:var(--choco);--ring:var(--girasol);--petal:var(--coral);--core:var(--turquesa);--dot:var(--crema)}
+.t-mandala .logo-neg{--t1:var(--coral);--t2:var(--girasol);--t3:var(--turquesa);--t4:var(--rosa);--stitch:var(--choco);--pad:var(--crema);--ring:var(--girasol);--petal:var(--coral);--core:var(--turquesa);--dot:var(--crema)}
+
+/* fila de bolitas multicolor reutilizable */
+.t-mandala .bobble-line,.t-mandala .shop::before,.t-mandala .footer::before,.t-mandala .how::before{
+  content:"";display:block;height:14px;background-image:var(--bobbles);background-size:96px 14px;
+  background-position:0 50%,24px 50%,48px 50%,72px 50%;background-repeat:repeat-x}
+.t-mandala .bobbles-row{display:none}
+
+/* top bar + header */
+.t-mandala .topbar{background:var(--turquesa);color:#fff}
+.t-mandala .brand-ic{width:54px;height:54px}
+.t-mandala .brand-txt small{color:var(--turquesa)}
+.t-mandala .nav a:hover{background:rgba(31,163,160,.12)}
+.t-mandala .cart-btn{background:var(--turquesa);color:#fff;box-shadow:0 10px 22px -12px rgba(31,163,160,.9)}
+.t-mandala .cart-btn em{background:var(--coral);color:#fff}
+
+/* botones */
+.t-mandala .btn-sun{background:var(--coral);color:#fff;box-shadow:0 12px 26px -12px rgba(226,85,59,.95)}
+.t-mandala .btn-ghost{color:var(--choco);box-shadow:inset 0 0 0 2px rgba(74,44,31,.35)}
+.t-mandala .btn-ghost:hover{box-shadow:inset 0 0 0 2px var(--choco)}
+.t-mandala .eyebrow{color:var(--coral)}
+.t-mandala .eyebrow.dark{color:var(--turquesa)}
+
+/* ---------- HERO luminoso ---------- */
+.t-mandala .hero{background:var(--crema);color:var(--choco)}
+.t-mandala .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 78% 45%,rgba(242,180,37,.28),transparent 70%),radial-gradient(40% 50% at 8% 90%,rgba(232,106,154,.18),transparent 70%),radial-gradient(35% 40% at 40% 0%,rgba(31,163,160,.14),transparent 70%)}
+.t-mandala .hero::after{background:var(--turquesa)}
+.t-mandala .hero-thread path{stroke:var(--turquesa);opacity:.45}
+.t-mandala .hero h1 .script{color:var(--coral);text-shadow:3px 3px 0 rgba(242,180,37,.45)}
+.t-mandala .hero h1 .big em{font-style:normal;color:var(--turquesa);position:relative;display:inline-block}
+.t-mandala .hero h1 .big em::after{content:"";position:absolute;left:0;right:0;bottom:-.06em;height:.16em;background-image:var(--bobbles);background-size:48px 100%;background-position:0 50%,12px 50%,24px 50%,36px 50%;--bobbles:radial-gradient(circle,var(--coral) 0 4px,transparent 4.5px),radial-gradient(circle,var(--girasol) 0 4px,transparent 4.5px),radial-gradient(circle,var(--turquesa) 0 4px,transparent 4.5px),radial-gradient(circle,var(--rosa) 0 4px,transparent 4.5px)}
+.t-mandala .hero-copy p{opacity:1}
+.t-mandala .hero-copy p b{color:var(--coral)}
+.t-mandala .hero-points .i{color:var(--turquesa)}
+.t-mandala .hero-points li:nth-child(2) .i{color:var(--coral)}
+.t-mandala .hero-points li:nth-child(3) .i{color:var(--rosa)}
+.mandala-deco{position:absolute;pointer-events:none}
+.mandala-deco svg{width:100%;height:100%;display:block;animation:spin 90s linear infinite}
+.hero-mandala{width:96%;aspect-ratio:1;right:-6%;top:-2%;filter:drop-shadow(0 30px 40px rgba(74,44,31,.22))}
+.hero-mandala-sm{width:22%;aspect-ratio:1;left:-2%;bottom:4%;opacity:.95}
+.hero-mandala-sm svg{animation-duration:30s;animation-direction:reverse}
+.t-mandala .hero-art .ring{border-color:rgba(226,85,59,.35);width:70%;right:-8%;top:-8%}
+.t-mandala .cut{filter:drop-shadow(0 26px 20px rgba(74,44,31,.38))}
+.t-mandala .seal{background:var(--turquesa)}
+.t-mandala .seal-ic{width:76px;height:76px}
+
+/* marquee */
+.t-mandala .marquee{background:var(--turquesa);color:#fff}
+.t-mandala .marquee-track .script{color:var(--girasol)}
+.t-mandala .marquee-track svg{fill:var(--girasol)}
+.t-mandala .marquee::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:14px;background-image:var(--bobbles);background-size:96px 14px;background-position:0 50%,24px 50%,48px 50%,72px 50%;background-repeat:repeat-x}
+
+/* encabezados */
+.t-mandala .sec-head h2 .script{color:var(--coral)}
+.t-mandala .sec-head.light h2 .script{color:var(--girasol)}
+
+/* ---------- tienda ---------- */
+.t-mandala .shop::before{position:absolute;left:0;right:0;top:0;opacity:0}
+.t-mandala .chip.on{background:var(--turquesa);border-color:var(--turquesa);color:#fff}
+.t-mandala .chip:hover{border-color:var(--turquesa)}
+.t-mandala .card{border-top:6px solid var(--c,var(--coral));position:relative}
+.t-mandala .card:nth-child(4n+1){--c:var(--coral)}
+.t-mandala .card:nth-child(4n+2){--c:var(--turquesa)}
+.t-mandala .card:nth-child(4n+3){--c:var(--girasol)}
+.t-mandala .card:nth-child(4n+4){--c:var(--rosa)}
+.t-mandala .stage3d{background:radial-gradient(120% 95% at 50% 32%,#fff 0%,rgba(251,245,236,.9) 45%,#EEDFC9 100%)}
+.t-mandala .stage3d::before{opacity:1;background:var(--rays);-webkit-mask:radial-gradient(circle at 50% 45%,#000 0 38%,transparent 62%);mask:radial-gradient(circle at 50% 45%,#000 0 38%,transparent 62%)}
+.t-mandala .c-media .badge{background:var(--c);color:#fff}
+.t-mandala .card:nth-child(4n+3) .c-media .badge{color:var(--choco)}
+.t-mandala .tag3d{background:#fff;color:var(--choco)}
+.t-mandala .tag3d::before{border-color:var(--turquesa);border-left-color:transparent}
+.t-mandala .price{color:var(--coral)}
+.t-mandala .add{background:var(--choco)}
+.t-mandala .add:hover{background:var(--c,var(--coral))}
+.t-mandala .add.ok{background:var(--turquesa)}
+.t-mandala .sz.on{background:var(--turquesa);border-color:var(--turquesa);color:#fff}
+.t-mandala .sz:hover{border-color:var(--turquesa)}
+.t-mandala .guide-link{color:var(--turquesa)}
+.t-mandala .sw.on{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--turquesa)}
+
+/* ---------- elige tu color ---------- */
+.t-mandala .picker{background:var(--coral);background-image:var(--rays),radial-gradient(70% 90% at 20% 50%,rgba(242,180,37,.35),transparent 70%);color:#fff}
+.t-mandala .picker-copy h2 .script{color:var(--girasol);text-shadow:3px 3px 0 rgba(74,44,31,.25)}
+.t-mandala .picker .eyebrow{color:var(--girasol)}
+.t-mandala .picker-img{border-color:#fff;transform:rotate(2deg)}
+.t-mandala .picker .btn-sun{background:var(--choco);color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)}
+.t-mandala .big-sw .sw.on{box-shadow:0 0 0 4px var(--coral),0 0 0 8px #fff}
+
+/* ---------- causa ---------- */
+.t-mandala .cause{background:var(--choco);background-image:radial-gradient(50% 60% at 50% 0%,rgba(31,163,160,.25),transparent 70%)}
+.cause-mandala{width:460px;aspect-ratio:1;right:-140px;top:-120px;opacity:.22}
+.cause-mandala.l{right:auto;left:-120px;top:auto;bottom:-150px;width:340px}
+.cause-mandala svg{animation-duration:120s}
+.t-mandala .step{border-color:rgba(251,245,236,.22)}
+.t-mandala .step:nth-child(1) h3{color:var(--coral)}
+.t-mandala .step:nth-child(2) h3{color:var(--girasol)}
+.t-mandala .step:nth-child(3) h3{color:var(--turquesa)}
+.t-mandala .step .n{color:var(--rosa)}
+.t-mandala .step::after{content:"";position:absolute;left:24px;right:24px;bottom:-7px;height:14px;background-image:var(--bobbles);background-size:96px 14px;background-position:0 50%,24px 50%,48px 50%,72px 50%;background-repeat:repeat-x}
+
+/* galería */
+.t-mandala .masonry img{border:6px solid #fff}
+.t-mandala .masonry img:nth-child(1){box-shadow:10px 10px 0 var(--girasol)}
+.t-mandala .masonry img:nth-child(2){box-shadow:10px 10px 0 var(--turquesa)}
+.t-mandala .masonry img:nth-child(3){box-shadow:10px 10px 0 var(--rosa)}
+.t-mandala .masonry img:nth-child(4){box-shadow:10px 10px 0 var(--coral)}
+.t-mandala .masonry img:nth-child(5){box-shadow:10px 10px 0 var(--girasol)}
+
+/* cómo comprar */
+.t-mandala .how::before{max-width:420px;margin:0 auto 60px}
+.t-mandala .how-it b{color:var(--coral)}
+.t-mandala .how-it:nth-child(2) b{color:var(--turquesa)}
+.t-mandala .how-it:nth-child(3) b{color:var(--rosa)}
+.t-mandala .how-it:nth-child(3){border-color:var(--rosa)}
+
+/* footer */
+.t-mandala .footer{position:relative;padding-top:70px}
+.t-mandala .footer::before{position:absolute;left:0;right:0;top:20px}
+.t-mandala .foot-ic{width:70px;height:70px}
+.t-mandala .foot-brand small{color:var(--turquesa)}
+.t-mandala .foot-links a:hover{color:var(--girasol)}
+
+/* modal, carrito, toast */
+.t-mandala .m-price{color:var(--coral)}
+.t-mandala .m-info .badge{background:var(--turquesa);color:#fff}
+.t-mandala .m-media{background:radial-gradient(110% 90% at 50% 32%,#fff 0%,#FBF5EC 45%,#EBDCC6 100%)}
+.t-mandala .m-media::before{content:"";position:absolute;inset:0;background:var(--rays);-webkit-mask:radial-gradient(circle at 50% 45%,#000 0 30%,transparent 60%);mask:radial-gradient(circle at 50% 45%,#000 0 30%,transparent 60%)}
+.t-mandala .v-ctrl button.on{background:var(--turquesa);color:#fff}
+.t-mandala .m-thumbs button.on{border-color:var(--turquesa)}
+.t-mandala .d-head{border-bottom:none}
+.t-mandala .d-head::after{content:"";position:absolute;left:24px;right:24px;bottom:-7px;height:14px;background-image:var(--bobbles);background-size:96px 14px;background-position:0 50%,24px 50%,48px 50%,72px 50%;background-repeat:repeat-x}
+.t-mandala .d-item .right b{color:var(--coral)}
+.t-mandala .toast{background:var(--turquesa)}
+.t-mandala .toast .i{color:var(--girasol)}
+.t-mandala .guide-box thead th{color:var(--turquesa)}
+
+/* resplandor detrás de los productos del hero para que destaquen sobre el mandala */
+.hero-mandala::after{content:"";position:absolute;inset:14%;border-radius:50%;background:radial-gradient(closest-side,rgba(251,245,236,.92),rgba(251,245,236,.65) 55%,rgba(251,245,236,0));pointer-events:none}
+.t-mandala .reveal{transition-duration:.6s}
+.t-mandala .masonry img:nth-child(6){box-shadow:10px 10px 0 var(--turquesa)}.t-mandala .masonry img:nth-child(7){box-shadow:10px 10px 0 var(--rosa)}
+
+/* pedido a medida (concepto 02) */
+.t-mandala .idea{background:radial-gradient(60% 80% at 85% 50%,rgba(31,163,160,.12),transparent 70%),radial-gradient(40% 60% at 5% 20%,rgba(232,106,154,.12),transparent 70%)}
+.t-mandala .idea-copy h2 .script{color:var(--coral)}
+.t-mandala .idea-card{border-top:8px solid var(--turquesa)}
+.t-mandala .idea-card::after{content:"";position:absolute;left:30px;right:30px;bottom:-7px;height:14px;background-image:var(--bobbles);background-size:96px 14px;background-position:0 50%,24px 50%,48px 50%,72px 50%;background-repeat:repeat-x}

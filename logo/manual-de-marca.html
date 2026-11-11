@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tete — Manual de marca (conceptos 01 y 02)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--choco:#4A2C1F;--caramelo:#B86B2B;--arena:#E9D8BF;--crema:#FBF5EC;--girasol:#F2B425;--turquesa:#1FA3A0;--coral:#E2553B;--rosa:#E86A9A}
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;font-family:Nunito,system-ui,sans-serif;background:#F4ECE0;color:var(--choco)}
+  nav{position:sticky;top:0;z-index:10;background:rgba(251,245,236,.95);backdrop-filter:blur(6px);display:flex;gap:10px;align-items:center;justify-content:center;padding:12px;border-bottom:2px dashed var(--arena)}
+  nav a,nav button{font:800 14px Nunito;color:var(--choco);text-decoration:none;padding:8px 16px;border-radius:99px;background:#fff;border:2px solid var(--arena);cursor:pointer}
+  nav a:hover,nav button:hover{border-color:var(--caramelo)}
+  .manual{max-width:1120px;margin:40px auto;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 10px 40px rgba(74,44,31,.1)}
+  .cover{min-height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:60px 24px;text-align:center;position:relative}
+  .cover::after{content:"";position:absolute;inset:18px;border:2px dashed currentColor;opacity:.25;border-radius:18px;pointer-events:none}
+  .cover small{font-weight:800;letter-spacing:.3em;text-transform:uppercase;font-size:12px}
+  .cover h1{margin:0;font-size:22px;font-weight:600;opacity:.9}
+  .sec{padding:56px 56px;border-top:2px dashed var(--arena)}
+  .sec h2{font-family:Pacifico,cursive;font-weight:400;font-size:32px;margin:0 0 6px}
+  .sec .num{font-weight:800;font-size:12px;letter-spacing:.2em;color:var(--caramelo)}
+  .sec p.lead{max-width:720px;line-height:1.7;margin:8px 0 28px}
+  .row{display:grid;gap:20px}
+  .c2{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}
+  .tile{border-radius:18px;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px 24px 44px;position:relative}
+  .tile .lbl{position:absolute;left:14px;bottom:10px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+  .bd{border:1px solid #eee}
+  .word{font-family:Pacifico,cursive;line-height:1;font-weight:400}
+  .tagline{font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+  .lv{display:flex;flex-direction:column;align-items:center}
+  .lh{display:flex;align-items:center;gap:14px}
+  .lh .txt{display:flex;flex-direction:column;align-items:flex-start}
+  /* protección */
+  .clear{position:relative;padding:44px;outline:2px dashed var(--caramelo);outline-offset:0;background:repeating-linear-gradient(45deg,rgba(184,107,43,.07) 0 8px,transparent 8px 16px)}
+  .clear .inner{background:#fff;padding:6px}
+  .x{position:absolute;font:800 13px Nunito;color:var(--caramelo)}
+  /* paleta */
+  .pal{display:flex;flex-wrap:wrap;gap:16px}
+  .sw{width:150px;border-radius:16px;overflow:hidden;border:1px solid #eee}
+  .sw span{display:block;height:90px}
+  .sw div{padding:10px 12px;font-size:13px;line-height:1.5}
+  .sw b{display:block;font-size:14px}
+  .prop{display:flex;height:38px;border-radius:12px;overflow:hidden;margin-top:22px;max-width:700px}
+  /* tipografía */
+  .type{border-radius:18px;padding:28px;border:1px solid #eee}
+  .type .big{font-size:64px;line-height:1.45}
+  .type .abc{font-size:18px;letter-spacing:.04em;margin-top:8px}
+  /* incorrecto */
+  .bad{position:relative}
+  .bad::after{content:"✕";position:absolute;top:10px;right:14px;font:800 20px Nunito;color:#D7263D}
+  .bad .lbl{color:#D7263D;opacity:1}
+  /* tarjetas */
+  .scene{background:linear-gradient(135deg,#E9D8BF,#D9C3A3);border-radius:22px;padding:56px 24px;display:flex;flex-wrap:wrap;gap:40px;justify-content:center;align-items:center}
+  .card{width:450px;height:250px;border-radius:12px;position:relative;overflow:hidden;box-shadow:0 22px 40px rgba(74,44,31,.28),0 2px 6px rgba(74,44,31,.2);flex:none}
+  .card .stitch{position:absolute;inset:12px;border:2px dashed currentColor;border-radius:8px;opacity:.35;pointer-events:none}
+  .front{display:flex;align-items:center;justify-content:center}
+  .back{display:grid;grid-template-columns:150px 1fr;align-items:center;padding:26px 30px 52px;gap:18px}
+  .back .who{display:flex;flex-direction:column;align-items:center;gap:4px;border-right:2px dashed;padding-right:16px}
+  .back ul{list-style:none;margin:0;padding:0;font-size:13px;line-height:1.9;white-space:nowrap}
+  .back ul li:first-child b{font-size:14px}
+  .back .band{position:absolute;left:0;right:0;bottom:0;height:36px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.05em}
+  .r1{transform:rotate(-4deg)}.r2{transform:rotate(3deg)}
+  .bobbles{position:absolute;top:12px;left:0;right:0;display:flex;justify-content:center;gap:9px}
+  .bobbles i{width:11px;height:11px;border-radius:50%}
+  .leather{width:260px;height:82px;border-radius:10px;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;background:radial-gradient(circle at 30% 30%,#B9703A,#A8622E 60%,#94552A);box-shadow:inset 0 0 0 2px rgba(0,0,0,.08),0 10px 20px rgba(74,44,31,.25)}
+  .leather::before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(60,30,12,.45);border-radius:6px}
+  .avatar{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(74,44,31,.2)}
+  .note{font-size:12.5px;opacity:.65;margin-top:18px}
+  @media screen and (max-width:900px){.c3,.c4{grid-template-columns:repeat(2,1fr)}.sec{padding:40px 22px}.card{transform:scale(.72);margin:-35px -63px}}
+  /* ===== Impresión: A4 horizontal, una sección por página ===== */
+  @page{size:A4 landscape;margin:0}
+  @media print{
+    nav{display:none}
+    html,body{background:#fff;margin:0}
+    .manual{box-shadow:none;margin:0;border-radius:0;max-width:none;width:297mm;overflow:visible}
+    .cover,.sec{width:297mm;height:210mm;overflow:hidden;break-after:page;break-inside:avoid;page-break-after:always}
+    .cover{min-height:0}
+    .sec{border-top:none;padding:0 22mm;display:flex;flex-direction:column;justify-content:center;position:relative;background:#fff}
+    .sec::after{content:"";position:absolute;inset:9mm;border:1.5px dashed var(--arena);border-radius:14px;pointer-events:none}
+    .sec .lead{margin-bottom:22px}
+    .sw{width:142px}
+    .pal{gap:12px}
+    .scene{padding:50px 10px;gap:26px;flex-wrap:nowrap}
+    .scene .card{zoom:.9}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Símbolos de los íconos ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="cpOvillo"><circle cx="100" cy="128" r="40"/></clipPath>
+
+    <!-- 01 Huella-ovillo -->
+    <symbol id="ic-ovillo" viewBox="0 0 200 200">
+      <g fill="var(--toe)">
+        <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/>
+        <ellipse cx="79" cy="48" rx="16" ry="21" transform="rotate(-8 79 48)"/>
+        <ellipse cx="121" cy="48" rx="16" ry="21" transform="rotate(8 121 48)"/>
+        <ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/>
+      </g>
+      <circle cx="100" cy="128" r="40" fill="var(--pad)"/>
+      <g clip-path="url(#cpOvillo)" fill="none" stroke="var(--line)" stroke-width="3.2" stroke-linecap="round">
+        <path d="M58 110 Q100 86 142 110"/><path d="M57 124 Q100 99 143 124"/><path d="M57 138 Q100 113 143 138"/><path d="M60 152 Q100 128 140 152"/>
+        <path d="M74 92 Q96 130 80 170"/><path d="M90 88 Q114 128 98 172"/><path d="M108 88 Q132 126 120 170"/>
+      </g>
+      <path d="M134 147 C154 161 158 183 180 177 C191 174 191 162 182 160" fill="none" stroke="var(--thread)" stroke-width="4.2" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- 02 Huella mandala -->
+    <symbol id="ic-mandala" viewBox="0 0 200 200">
+      <circle cx="46" cy="80" r="17" fill="var(--t1)"/><circle cx="46" cy="80" r="10" fill="none" stroke="var(--stitch)" stroke-width="2.5" stroke-dasharray="3 3"/>
+      <circle cx="80" cy="48" r="18" fill="var(--t2)"/><circle cx="80" cy="48" r="11" fill="none" stroke="var(--stitch)" stroke-width="2.5" stroke-dasharray="3 3"/>
+      <circle cx="120" cy="48" r="18" fill="var(--t3)"/><circle cx="120" cy="48" r="11" fill="none" stroke="var(--stitch)" stroke-width="2.5" stroke-dasharray="3 3"/>
+      <circle cx="154" cy="80" r="17" fill="var(--t4)"/><circle cx="154" cy="80" r="10" fill="none" stroke="var(--stitch)" stroke-width="2.5" stroke-dasharray="3 3"/>
+      <circle cx="100" cy="130" r="44" fill="var(--pad)"/>
+      <circle cx="100" cy="130" r="37" fill="none" stroke="var(--ring)" stroke-width="5" stroke-dasharray="5 4"/>
+      <g fill="var(--petal)">
+        <ellipse cx="100" cy="108" rx="6" ry="10"/><ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(45 100 130)"/>
+        <ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(90 100 130)"/><ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(135 100 130)"/>
+        <ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(180 100 130)"/><ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(225 100 130)"/>
+        <ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(270 100 130)"/><ellipse cx="100" cy="108" rx="6" ry="10" transform="rotate(315 100 130)"/>
+      </g>
+      <circle cx="100" cy="130" r="10" fill="var(--core)"/>
+      <circle cx="100" cy="130" r="4" fill="var(--dot)"/>
+    </symbol>
+
+    <!-- huellita simple para detalles -->
+    <symbol id="paw" viewBox="0 0 200 200">
+      <ellipse cx="46" cy="78" rx="15" ry="19" transform="rotate(-25 46 78)"/><ellipse cx="79" cy="48" rx="16" ry="21"/>
+      <ellipse cx="121" cy="48" rx="16" ry="21"/><ellipse cx="154" cy="78" rx="15" ry="19" transform="rotate(25 154 78)"/>
+      <circle cx="100" cy="128" r="40"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <a href="#ovillo">01 · Huella-ovillo</a>
+  <a href="#mandala">02 · Huella mandala</a>
+  <button onclick="window.print()">Imprimir / guardar PDF</button>
+</nav>
+
+<div id="app"></div>
+
+<script>
+const C = {choco:'#4A2C1F',caramelo:'#B86B2B',arena:'#E9D8BF',crema:'#FBF5EC',girasol:'#F2B425',turquesa:'#1FA3A0',coral:'#E2553B',rosa:'#E86A9A'};
+const toes = {t1:C.coral,t2:C.girasol,t3:C.turquesa,t4:C.rosa};
+
+const concepts = [
+{
+  id:'ovillo', n:'01', name:'Huella-ovillo', sym:'ic-ovillo', tagline:'tejidos con causa',
+  story:'El ovillo es el corazón de la huella: cada pieza de Tete nace de una hebra de lana y termina ayudando a un perrito de la calle. La hebra suelta representa el trabajo hecho a mano, puntada a puntada. Es una marca cálida, cercana y fácil de reconocer incluso en tamaños pequeños.',
+  v:{
+    pos:{vars:{toe:C.caramelo,pad:C.choco,line:C.arena,thread:C.choco},word:C.choco,tag:C.caramelo,bg:C.crema},
+    neg:{vars:{toe:C.girasol,pad:C.crema,line:C.caramelo,thread:C.crema},word:C.crema,tag:C.girasol,bg:C.choco},
+    monoD:{vars:{toe:'#2B1A12',pad:'#2B1A12',line:'#fff',thread:'#2B1A12'},word:'#2B1A12',tag:'#2B1A12',bg:'#fff'},
+    monoW:{vars:{toe:'#fff',pad:'#fff',line:C.caramelo,thread:'#fff'},word:'#fff',tag:'#fff',bg:C.caramelo},
+    leather:{vars:{toe:'#5E3318',pad:'#5E3318',line:'#A8622E',thread:'#5E3318'}},
+    wrong:{vars:{toe:'#7CFC00',pad:'#2340FF',line:'#FF2BD6',thread:'#2340FF'}}
+  },
+  palette:[
+    ['Chocolate',C.choco,'Logo, textos, fondos oscuros',40],
+    ['Crema',C.crema,'Fondos claros',25],
+    ['Caramelo',C.caramelo,'Dedos de la huella, detalles',18],
+    ['Lana cruda',C.arena,'Líneas del ovillo, bordes',12],
+    ['Girasol',C.girasol,'Acento: botones, ofertas',5]
+  ],
+  card:{frontBg:C.choco,frontV:'neg',stitch:C.girasol,backBg:C.crema,backInk:C.choco,band:C.caramelo,bandInk:C.crema,bobbles:null}
+},
+{
+  id:'mandala', n:'02', name:'Huella mandala', sym:'ic-mandala', tagline:'tejidos con causa',
+  story:'La almohadilla de la huella es un mandala, como los atrapasueños que Tete teje; los deditos son las bolitas de colores que aparecen en sus piezas. Es una marca alegre, colorida y con un toque espiritual, que transmite la energía de cada tejido y el amor por los animales.',
+  v:{
+    pos:{vars:{...toes,stitch:C.crema,pad:C.choco,ring:C.girasol,petal:C.coral,core:C.turquesa,dot:C.crema},word:C.choco,tag:C.turquesa,bg:C.crema},
+    neg:{vars:{...toes,stitch:C.choco,pad:C.crema,ring:C.girasol,petal:C.coral,core:C.turquesa,dot:C.crema},word:C.crema,tag:C.girasol,bg:C.choco},
+    monoD:{vars:{t1:'#2B1A12',t2:'#2B1A12',t3:'#2B1A12',t4:'#2B1A12',stitch:'#fff',pad:'#2B1A12',ring:'#fff',petal:'#fff',core:'#fff',dot:'#2B1A12'},word:'#2B1A12',tag:'#2B1A12',bg:'#fff'},
+    monoW:{vars:{t1:'#fff',t2:'#fff',t3:'#fff',t4:'#fff',stitch:C.turquesa,pad:'#fff',ring:C.turquesa,petal:C.turquesa,core:C.turquesa,dot:'#fff'},word:'#fff',tag:'#fff',bg:C.turquesa},
+    leather:{vars:{t1:'#5E3318',t2:'#5E3318',t3:'#5E3318',t4:'#5E3318',stitch:'#A8622E',pad:'#5E3318',ring:'#A8622E',petal:'#A8622E',core:'#A8622E',dot:'#5E3318'}},
+    wrong:{vars:{t1:'#000',t2:'#888',t3:'#7CFC00',t4:'#2340FF',stitch:'#fff',pad:'#7CFC00',ring:'#2340FF',petal:'#FF2BD6',core:'#000',dot:'#fff'}}
+  },
+  palette:[
+    ['Chocolate',C.choco,'Logo, textos, fondos oscuros',32],
+    ['Crema',C.crema,'Fondos claros',28],
+    ['Turquesa',C.turquesa,'Color de acción principal',12],
+    ['Girasol',C.girasol,'Anillo del mandala, acentos',10],
+    ['Coral',C.coral,'Pétalos, ofertas',10],
+    ['Rosa chicle',C.rosa,'Detalles, bebé y regalos',8]
+  ],
+  card:{frontBg:C.choco,frontV:'neg',stitch:C.girasol,backBg:C.crema,backInk:C.choco,band:C.turquesa,bandInk:'#fff',bobbles:[C.coral,C.girasol,C.turquesa,C.rosa]}
+}];
+
+const st = vars => Object.entries(vars).map(([k,x])=>`--${k}:${x}`).join(';');
+const icon = (c,vars,size,extra='') => `<svg viewBox="0 0 200 200" width="${size}" height="${size}" style="${st(vars)};${extra}"><use href="#${c.sym}"/></svg>`;
+const paw = (color,size) => `<svg viewBox="0 0 200 200" width="${size}" height="${size}" style="fill:${color}"><use href="#paw"/></svg>`;
+const rgb = h => [1,3,5].map(i=>parseInt(h.slice(i,i+2),16)).join(', ');
+
+function lockV(c,v,s=1,tag=true){
+  return `<div class="lv">${icon(c,v.vars,150*s)}
+    <div class="word" style="color:${v.word};font-size:${60*s}px;margin-top:${-6*s}px">tete</div>
+    ${tag?`<div class="tagline" style="color:${v.tag};font-size:${11*s}px;margin-top:${8*s}px">${c.tagline}</div>`:''}</div>`;
+}
+function lockH(c,v,s=1){
+  return `<div class="lh">${icon(c,v.vars,92*s)}
+    <div class="txt"><div class="word" style="color:${v.word};font-size:${54*s}px">tete</div>
+    <div class="tagline" style="color:${v.tag};font-size:${10*s}px;margin-top:${6*s}px">${c.tagline}</div></div></div>`;
+}
+
+function card(c){
+  const k=c.card, v=c.v[k.frontV], p=c.v.pos;
+  const bob = k.bobbles ? `<div class="bobbles">${Array.from({length:22},(_,i)=>`<i style="background:${k.bobbles[i%4]}"></i>`).join('')}</div>` : '';
+  return `
+  <div class="card front r1" style="background:${k.frontBg};color:${k.stitch}"><div class="stitch"></div>${lockV(c,v,.82)}</div>
+  <div class="card back r2" style="background:${k.backBg};color:${k.backInk}">
+    ${bob}<div class="stitch" style="bottom:48px"></div>
+    <div class="who" style="border-color:${C.arena}">${icon(c,p.vars,74)}<div class="word" style="font-size:34px">tete</div></div>
+    <ul>
+      <li><b>Tejidos a crochet hechos a mano</b></li>
+      <li>Instagram&nbsp; <b>@tete.tejidos</b></li>
+      <li>WhatsApp&nbsp; <b>+56 9 0000 0000</b></li>
+      <li>Pedidos y diseños a medida</li>
+    </ul>
+    <div class="band" style="background:${k.band};color:${k.bandInk}">${paw(k.bandInk,16)} Parte de cada tejido alimenta a perritos de la calle ${paw(k.bandInk,16)}</div>
+  </div>`;
+}
+
+function manual(c){
+  const V=c.v;
+  return `
+<article class="manual" id="${c.id}">
+  <div class="cover" style="background:${V.neg.bg};color:${V.neg.tag}">
+    <small>Manual de marca · Concepto ${c.n}</small>
+    ${lockV(c,V.neg,1.5)}
+    <h1 style="color:${C.crema}">${c.name}</h1>
+  </div>
+
+  <section class="sec">
+    <div class="num">01 — CONCEPTO</div><h2>La idea</h2>
+    <p class="lead">${c.story}</p>
+    <div class="row c2">
+      <div class="tile" style="background:${C.crema};background-image:linear-gradient(${C.arena} 1px,transparent 1px),linear-gradient(90deg,${C.arena} 1px,transparent 1px);background-size:20px 20px">
+        ${icon(c,V.pos.vars,230)}<span class="lbl">Ícono sobre retícula</span></div>
+      <div class="tile" style="background:${C.crema};align-items:flex-start;justify-content:center">
+        <p style="margin:0;line-height:1.8"><b>Huella</b> → amor por los animales y la causa solidaria.<br>
+        <b>${c.id==='ovillo'?'Ovillo y hebra':'Mandala y bolitas'}</b> → el oficio: crochet hecho a mano.<br>
+        <b>Letra manuscrita</b> → cercanía, algo hecho por una persona, no por una fábrica.<br>
+        <b>Colores</b> → tomados directamente de sus tejidos.</p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">02 — LOGO</div><h2>Versiones del logo</h2>
+    <p class="lead">La versión <b>vertical</b> es la principal. La <b>horizontal</b> se usa en espacios anchos (encabezado de la web, firmas de correo). El <b>ícono</b> solo se usa cuando la marca ya es reconocible (redes, sellos, etiquetas).</p>
+    <div class="row c3">
+      <div class="tile bd" style="background:${C.crema}">${lockV(c,V.pos,1)}<span class="lbl">Principal · vertical</span></div>
+      <div class="tile bd" style="background:${C.crema}">${lockH(c,V.pos,.82)}<span class="lbl">Horizontal</span></div>
+      <div class="tile bd" style="background:${C.crema}">${icon(c,V.pos.vars,170)}<span class="lbl">Ícono</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">03 — COLOR</div><h2>Versiones de color</h2>
+    <p class="lead">Usa la versión <b>positiva</b> sobre fondos claros y la <b>negativa</b> sobre fondos oscuros. Las versiones a <b>un color</b> son para sellos, grabados, timbres o impresiones económicas.</p>
+    <div class="row c4">
+      ${[['pos','Positivo'],['neg','Negativo'],['monoD','Un color oscuro'],['monoW','Un color claro']].map(([k,l])=>
+        `<div class="tile ${k==='monoD'?'bd':''}" style="background:${V[k].bg}">${lockV(c,V[k],.72)}<span class="lbl" style="color:${V[k].word}">${l}</span></div>`).join('')}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">04 — USO</div><h2>Área de protección y tamaño mínimo</h2>
+    <p class="lead">Alrededor del logo siempre debe quedar un espacio libre igual a <b>x</b> (el alto de un dedito de la huella). Nada de texto, fotos ni bordes dentro de esa zona.</p>
+    <div class="row c2">
+      <div class="tile bd" style="background:#fff">
+        <div class="clear"><span class="x" style="top:12px;left:50%">x</span><span class="x" style="bottom:12px;left:50%">x</span><span class="x" style="left:16px;top:50%">x</span><span class="x" style="right:16px;top:50%">x</span>
+        <div class="inner">${lockV(c,V.pos,.8)}</div></div></div>
+      <div class="tile bd" style="background:#fff;gap:26px">
+        <div style="display:flex;align-items:flex-end;gap:34px">
+          <div style="text-align:center">${icon(c,V.pos.vars,96)}<div class="note">Recomendado</div></div>
+          <div style="text-align:center">${icon(c,V.pos.vars,48)}<div class="note">Pequeño</div></div>
+          <div style="text-align:center">${icon(c,V.pos.vars,24)}<div class="note">Mínimo</div></div>
+        </div>
+        <p style="margin:0;text-align:center;line-height:1.7;font-size:14px">Mínimo digital: <b>24 px</b> el ícono / <b>100 px</b> de ancho el logo completo.<br>Mínimo impreso: <b>8 mm</b> el ícono / <b>25 mm</b> el logo completo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">05 — PALETA</div><h2>Colores de marca</h2>
+    <p class="lead">Colores sacados de sus propios tejidos. La barra muestra en qué proporción usarlos para que la marca se vea siempre igual.</p>
+    <div class="pal">
+      ${c.palette.map(([n,h,u])=>`<div class="sw"><span style="background:${h};${h===C.crema?'border-bottom:1px solid #eee':''}"></span><div><b>${n}</b>HEX ${h}<br>RGB ${rgb(h)}<br><span style="opacity:.7;height:auto;display:inline">${u}</span></div></div>`).join('')}
+    </div>
+    <div class="prop">${c.palette.map(([n,h,,p])=>`<div style="flex:${p};background:${h}" title="${n} ${p}%"></div>`).join('')}</div>
+  </section>
+
+  <section class="sec">
+    <div class="num">06 — TIPOGRAFÍA</div><h2>Letras de la marca</h2>
+    <p class="lead">Dos tipografías gratuitas de Google Fonts. Para la versión final de imprenta, el nombre "tete" del logo se entrega convertido a vector (no depende de la fuente instalada).</p>
+    <div class="row c2">
+      <div class="type"><div class="note" style="margin:0 0 6px">Logo y títulos</div><div class="big word">Pacifico</div><div class="abc word" style="font-size:24px">Aa Bb Cc Dd Ee Ññ 123</div></div>
+      <div class="type"><div class="note" style="margin:0 0 6px">Textos, precios y botones</div><div class="big" style="font-weight:800">Nunito</div><div class="abc">Aa Bb Cc Dd Ee Ññ 123 — <b>Negrita</b> · Normal</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">07 — CUIDADOS</div><h2>Usos incorrectos</h2>
+    <p class="lead">Para que la marca se reconozca siempre, el logo no se modifica.</p>
+    <div class="row c4">
+      <div class="tile bd bad" style="background:${C.crema}"><div style="transform:scaleX(1.45)">${lockV(c,V.pos,.55,false)}</div><span class="lbl">No estirar</span></div>
+      <div class="tile bd bad" style="background:${C.crema}"><div style="transform:rotate(-22deg)">${lockV(c,V.pos,.55,false)}</div><span class="lbl">No rotar</span></div>
+      <div class="tile bd bad" style="background:${C.crema}">${lockV(c,{...V.wrong,word:'#2340FF',tag:'#FF2BD6'},.55,false)}<span class="lbl">No cambiar colores</span></div>
+      <div class="tile bd bad" style="background:repeating-linear-gradient(45deg,${C.coral} 0 14px,${C.turquesa} 14px 28px,${C.girasol} 28px 42px)">${lockV(c,V.pos,.55,false)}<span class="lbl" style="background:#fff;padding:2px 6px;border-radius:4px">No usar sobre fondos recargados</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="num">08 — APLICACIONES</div><h2>Tarjeta de presentación</h2>
+    <p class="lead">Tamaño estándar 9 × 5 cm. Frente con el logo en negativo y costura punteada (guiño al tejido); reverso con datos de contacto y el mensaje de la causa.</p>
+    <div class="scene">${card(c)}</div>
+    <p class="note">* Instagram y WhatsApp son datos de ejemplo: se reemplazan por los reales.</p>
+
+  </section>
+
+  <section class="sec">
+    <div class="num">08 — APLICACIONES</div><h2>Etiqueta y redes</h2>
+    <p class="lead">La etiqueta de cuero que ya usa en sus tejidos, con el logo grabado, y la foto de perfil para Instagram / WhatsApp.</p>
+    <div class="row c3">
+      <div class="tile" style="background:${C.crema}"><div class="leather">${icon(c,V.leather.vars,58)}<span class="word" style="font-size:38px;color:#5E3318">tete</span></div><span class="lbl">Etiqueta de cuero</span></div>
+      <div class="tile" style="background:${C.crema}"><div class="avatar" style="background:${V.neg.bg}">${icon(c,V.neg.vars,104)}</div><span class="lbl">Perfil oscuro</span></div>
+      <div class="tile" style="background:${C.crema}"><div class="avatar" style="background:#fff">${icon(c,V.pos.vars,104)}</div><span class="lbl">Perfil claro</span></div>
+    </div>
+  </section>
+</article>`;
+}
+
+document.getElementById('app').innerHTML = concepts.map(manual).join('');
+</script>
+</body>
+</html>
